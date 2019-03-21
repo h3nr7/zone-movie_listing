@@ -1,6 +1,6 @@
 # ZONE MOVING LISTING
 
-[https://zone-movie-listing.herokuapp.com/](demo site)
+[demo heroku site](https://zone-movie-listing.herokuapp.com)
 
 This app is built with a custom stack of React and Node.  The UI is based heavily on Material-UI.
 
