@@ -210,7 +210,7 @@ class App extends Component {
               filterType={filterType}
               tileData={movieList} /> }
       </main>
-      <Footer />
+      { isMovieLoading ? null : <Footer /> }
       </div>
     );
   }
