@@ -1,0 +1,10 @@
+# Untracked files
+build_logs/
+node_modules/
+static/
+data/
+.env
+.dotenv
+.idea
+*.iml
+*.js__*

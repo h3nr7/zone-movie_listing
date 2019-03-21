@@ -1,0 +1,48 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "commonjs": true,
+        "es6": true,
+        "jest": true
+    },
+    "globals": {
+      "PORT": true,
+      "NODE_ENV": true,
+      "API_PROTOCOL": true,
+      "API_ENDPOINT": true,
+      "API_VER": true,
+      "API_KEY": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "babel"
+    ],
+    "rules": {
+        "no-extra-boolean-cast": 1,
+        "no-console": 0,
+        "no-debugger": 0,
+        "no-unused-vars": 1,
+        "no-undef": 1,
+        "block-spacing": 0,
+        "react/prop-types": 1,
+        "react/no-deprecated": 1,
+        "indent": 0,
+        "linebreak-style": ["off", "unix" ],
+        "quotes": [ "off", "single" ],
+        "semi": [ "error", "always" ]
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ]
+}

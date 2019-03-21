@@ -1,0 +1,14 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "at-rule-empty-line-before": null,
+    "at-rule-name-space-after": null,
+    "media-feature-parentheses-space-inside": "never",
+    "number-leading-zero": null,
+    "indentation": null,
+    "declaration-empty-line-before": null,
+    "declaration-block-semicolon-newline-after": null,
+    "selector-list-comma-newline-after": null
+  }
+}
