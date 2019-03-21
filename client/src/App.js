@@ -74,6 +74,8 @@ const PROP_TYPES = {
   theme: PropTypes.object.isRequired
 };
 
+
+
 class App extends Component {
 
   static propTypes = PROP_TYPES
