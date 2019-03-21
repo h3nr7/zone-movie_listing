@@ -1,4 +1,4 @@
-# ZONE MOVING LISTING
+# ZONE MOVIE LISTING
 
 [demo heroku site](https://zone-movie-listing.herokuapp.com)
 
