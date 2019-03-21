@@ -106,7 +106,7 @@ class MovieList extends Component {
     const { tileData, filterType } = this.state;
     const { root, gridList, icon, titleBar, title, subtitle  } = classes;
 
-    console.log('lala', filterType);
+    const wWidth = window.innerWidth > 780 ? 'original' : window.innerWidth >= 500 ? 'w780' : window.innerWidth >= 342 ? 'w500' : window.innerWidth >= 185 ? 'w342' : 'w185';
 
     return (
       <div className={`${root} movielist__container`}>
@@ -116,19 +116,17 @@ class MovieList extends Component {
             // the genre tag filtering felt a little off, therefore giving the option to do union or intersect type filtering
             if(filterType === 'intersect') {
               let intersection = tile.genre_ids.filter(x => genre.includes(x));
-              console.log('me intersect', tile.vote_average >= rating && intersection.length === tile.genre_ids.length);
               return tile.vote_average >= rating && intersection.length === tile.genre_ids.length;
             }
 
             const test = new Set([...genre, ...tile.genre_ids]);
             const calcGenreDiff = tile.genre_ids.length + genre.length - test.size;
-            console.log('me union', tile.vote_average >= rating && calcGenreDiff > 0);
             return tile.vote_average >= rating && calcGenreDiff > 0;
           })
           .sort((a, b) => b.popularity - a.popularity)
           .map((tile, index) => (
             <GridListTile key={tile.title} cols={index%3 === 0 ? 2 : 1} rows={index%3 === 0 ? 2 : 1}>
-              <img src={`https://image.tmdb.org/t/p/w500${tile.backdrop_path}`} alt={tile.title} />
+              <img src={`https://image.tmdb.org/t/p/${wWidth}${tile.backdrop_path}`} alt={tile.title} />
               <GridListTileBar
                 classes={{ title }}
                 title={tile.title}
